@@ -6,7 +6,7 @@ This architecture was designed and implemented to align with the Microsoft Cyber
 
 🏗️ Architecture Design
 
-(Insert your architecture diagram image here by saving an image file to the repo and linking it like ![Architecture Diagram](./diagram.png))
+[Architecture Diagram](./microsoft-hub-spoke-architecture-demo.png)
 
 Key Security & Routing Features:
 Hub-and-Spoke Topology: Isolates workloads (Spokes) while centralizing shared services and security (Hub).
