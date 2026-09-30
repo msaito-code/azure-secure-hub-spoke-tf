@@ -1,0 +1,35 @@
+name: DevSecOps IaC Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main "]
+
+jobs:
+  iac-security-and-quality:
+    name: Terraform Quality & Security Checks
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout Code
+      uses: action/checkout@v4
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+
+    - name: Check Terraform Formatting
+      run: terraform fmt -check -recursive
+      continue-on-error: false
+
+    - name: Initialize Terrafor (Validation mode)
+      # Initialization without needing Azure credentials just to validate syntax
+      run: terraform init -backend=false
+
+    - name: Validate Terraform Syntax
+      run: terraform validate
+
+    - name: Run tfsec Security Scanner
+      uses: aquasecurity/tfsec-action@v1.0.3
+      with:
+        sort_fail: false # Ensures the pipeline fails if vulnerabilities are detected
