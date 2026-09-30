@@ -29,6 +29,7 @@ Core Traffic Flow:
  - Azure Bastion (Optional): Secure PaaS RDP/SSH access without exposing public IP addresses on VMs.
 
 💡 Terraform Competencies Highlighted
+
 This configuration demonstrates advanced Terraform practices, moving beyond basic resource blocks:
  - Modular Design: Separating Hub, Spoke, and Firewall deployments into reusable custom modules.
  - Data Structures: Utilizing for_each and count loops to dynamically provision multiple spokes and subnets based on variable inputs.
@@ -36,7 +37,9 @@ This configuration demonstrates advanced Terraform practices, moving beyond basi
  - Output Management: Passing dynamically generated resource IDs (like the Firewall Private IP) between modules for route table configuration.
 
 🚀 Usage Instructions
+
 Prerequisites
+
 Terraform CLI (v1.3.0+)
 
 Azure CLI
