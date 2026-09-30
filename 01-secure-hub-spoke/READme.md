@@ -21,7 +21,6 @@ Core Traffic Flow:
 🛠️ Azure Resources Deployed
 
 Hub Virtual Network: Central connectivity point.
-
 Spoke Virtual Networks (2x): Isolated environments for workload simulation (e.g., Prod and Dev).
 
 VNet Peering: Configured between the Hub and each Spoke (non-transitive by default).
