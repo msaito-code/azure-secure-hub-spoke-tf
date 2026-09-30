@@ -20,18 +20,13 @@ Core Traffic Flow:
 
 🛠️ Azure Resources Deployed
 
-Hub Virtual Network: Central connectivity point.
-Spoke Virtual Networks (2x): Isolated environments for workload simulation (e.g., Prod and Dev).
-
-VNet Peering: Configured between the Hub and each Spoke (non-transitive by default).
-
-Azure Firewall (Premium/Standard): Centralized traffic filtering and threat intelligence.
-
-User-Defined Routes (UDRs): Custom route tables associated with Spoke subnets to force tunnel traffic to the firewall instance.
-
-Network Security Groups (NSGs): Baseline subnet-level security.
-
-Azure Bastion (Optional): Secure PaaS RDP/SSH access without exposing public IP addresses on VMs.
+ - Hub Virtual Network: Central connectivity point.
+ - Spoke Virtual Networks (2x): Isolated environments for workload simulation (e.g., Prod and Dev).
+ - VNet Peering: Configured between the Hub and each Spoke (non-transitive by default).
+ - Azure Firewall (Premium/Standard): Centralized traffic filtering and threat intelligence.
+ - User-Defined Routes (UDRs): Custom route tables associated with Spoke subnets to force tunnel traffic to the firewall instance.
+ - Network Security Groups (NSGs): Baseline subnet-level security.
+ - Azure Bastion (Optional): Secure PaaS RDP/SSH access without exposing public IP addresses on VMs.
 
 💡 Terraform Competencies Highlighted
 This configuration demonstrates advanced Terraform practices, moving beyond basic resource blocks:
