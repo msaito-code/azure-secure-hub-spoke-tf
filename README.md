@@ -4,7 +4,7 @@
 [![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![Security](https://img.shields.io/badge/Security-Architect-red?style=for-the-badge)]()
 
-Welcome! My name is **[Your Name]**, an **Azure Cloud Security Engineer & Architect**. 
+Welcome! My name is **Matheus Saito**, an **Azure Cloud Security Engineer & Architect**. 
 
 This repository serves as a centralized portfolio showcasing my ability to design, deploy, and secure enterprise-grade Azure environments using **Terraform (Infrastructure as Code)**. 
 
@@ -16,10 +16,10 @@ To make it easy for recruiters and hiring managers to review my work without jum
 
 I hold several advanced Microsoft certifications that validate my expertise in cloud architecture, network engineering, and cybersecurity:
 
-*   **SC-100:** Microsoft Cybersecurity Architect Expert
-*   **AZ-305:** Azure Solutions Architect Expert
-*   **AZ-700:** Azure Network Engineer Associate
-*   **SC-200:** Microsoft Security Operations Analyst
+*   **SC-100:** [Microsoft Cybersecurity Architect Expert](https://learn.microsoft.com/api/credentials/share/en-us/MatheusLuizSaitoSoaresProdutivit-1442/844CFB8BF43D56AC?sharingId=AA351E191EB9C826)
+*   **AZ-305:** [Azure Solutions Architect Expert](https://learn.microsoft.com/api/credentials/share/en-us/MatheusLuizSaitoSoaresProdutivit-1442/746029FACFAAC01F?sharingId=AA351E191EB9C826)
+*   **AZ-700:** [Azure Network Engineer Associate](https://learn.microsoft.com/api/credentials/share/en-us/MatheusLuizSaitoSoaresProdutivit-1442/8B524359138DD108?sharingId=AA351E191EB9C826)
+*   **SC-200:** [Microsoft Security Operations Analyst](https://learn.microsoft.com/api/credentials/share/en-us/MatheusLuizSaitoSoaresProdutivit-1442/30BDE4437B437812?sharingId=AA351E191EB9C826)
 
 **Core Technical Competencies:**
 *   **Infrastructure as Code (IaC):** Terraform (HCL), Azure Bicep, ARM Templates, State Management, CI/CD Pipelines (GitHub Actions/Azure DevOps).
@@ -57,6 +57,5 @@ In real-world enterprise environments, security must be "shift-left" and embedde
 
 I am currently open to remote opportunities as a Cloud Security Engineer, DevSecOps Engineer, or Azure Architect. 
 
-*   **LinkedIn:** [Your LinkedIn Profile URL]
-*   **Email:** [Your Email Address]
-*   **Credly/Microsoft Learn:** [Link to your digital badges]
+*   **LinkedIn:** https://www.linkedin.com/in/matheus-luiz-saito-soares-b7ab80236
+*   **Email:** matheus.saito0201@gmail.com
