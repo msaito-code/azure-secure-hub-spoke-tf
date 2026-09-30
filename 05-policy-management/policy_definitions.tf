@@ -1,10 +1,11 @@
 # 4. Custom Policy Definition: Restrict allowed Azure Locations
 resource "azurerm_policy_definition" "allowed_locations" {
-	name		= "allowed-azure-locations"
-	policy_type	= "Custom"
-	mode		= "All"
-	display_name	= "Allowed Azure Location"
-	description	= "This policy restricts deployment of resources to specified allowed Azure regions"
+	name			= "allowed-azure-locations"
+	policy_type		= "Custom"
+	mode			= "All"
+	management_group_id	= azurerm_management_group.org_root.id
+	display_name		= "Allowed Azure Location"
+	description		= "This policy restricts deployment of resources to specified allowed Azure regions"
 
 	metadata = jsonencode ({
 		category = "Governance"
@@ -14,7 +15,7 @@ resource "azurerm_policy_definition" "allowed_locations" {
 		if = {
 			not = {
 				field 	= "location"
-				in	= ["parameters(allowedLocations)"]
+				in	= "[parameters('allowedLocations')]"
 			}
 		}
 		then = {
