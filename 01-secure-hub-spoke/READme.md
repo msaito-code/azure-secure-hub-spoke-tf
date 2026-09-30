@@ -55,6 +55,7 @@ az account set --subscription "<YOUR_SUBSCRIPTION_ID>"
 *(Note: After connecting with 'az login', the system might show you the available subscriptions and prompt you to select one. In this case, you won't need to run the 'az account' command)*
 
 Initialize the Directory:
+
 Downloads the necessary AzureRM provider plugins.
 ```
 Bash
@@ -62,6 +63,7 @@ terraform init
 ```
 
 Review the Execution Plan:
+
 Validates the configuration and displays the resources to be created.
 ```
 Bash
@@ -69,6 +71,7 @@ terraform plan -out=hub_spoke.tfplan
 ```
 
 Apply the Infrastructure:
+
 Executes the deployment. This may take 15-25 minutes due to the Azure Firewall provisioning time.
 ```
 Bash
