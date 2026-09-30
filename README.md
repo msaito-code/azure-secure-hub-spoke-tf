@@ -1,51 +1,62 @@
-Enterprise Secure Hub-and-Spoke Network in Azure
+# 🛡️ Azure Cloud Security & IaC Portfolio
 
-📌 Overview
-This repository contains the Infrastructure as Code (IaC) configuration to deploy a secure, enterprise-grade Hub-and-Spoke network topology in Microsoft Azure.
-This architecture was designed and implemented to align with the Microsoft Cybersecurity Reference Architecture (MCRA) and principles evaluated in the AZ-305 (Solutions Architect) and SC-100 (Cybersecurity Architect) certifications. It demonstrates a Zero Trust approach to cloud networking, centralized traffic inspection, and scalable infrastructure deployment using Terraform.
+[![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/en-us/)
+[![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![Security](https://img.shields.io/badge/Security-Architect-red?style=for-the-badge)]()
 
-🏗️ Architecture Design
+Welcome! My name is **[Your Name]**, an **Azure Cloud Security Engineer & Architect**. 
 
-[Architecture Diagram](./microsoft-hub-spoke-architecture-demo.png)
+This repository serves as a centralized portfolio showcasing my ability to design, deploy, and secure enterprise-grade Azure environments using **Terraform (Infrastructure as Code)**. 
 
-Key Security & Routing Features:
-Hub-and-Spoke Topology: Isolates workloads (Spokes) while centralizing shared services and security (Hub).
-Centralized Traffic Inspection: An Azure Firewall is deployed in the Hub network to inspect all inter-spoke and internet-bound traffic.
-Forced Tunneling via UDRs: User Defined Routes (UDRs) override default Azure routing, forcing all outbound Spoke traffic (0.0.0.0/0) to the Azure Firewall as the Next-Hop Virtual Appliance.
-Subnet-Level Microsegmentation: Network Security Groups (NSGs) are bound to workload subnets, explicitly denying direct administrative access (SSH/RDP) from the public internet to enforce bastion/jump-box patterns.
+To make it easy for recruiters and hiring managers to review my work without jumping between multiple links, I have consolidated my key project demos into this single repository. Each subfolder represents an isolated, production-ready scenario with its own detailed documentation.
 
-📂 Repository Structur
-The Terraform configuration is modularized for readability and maintainability:
-main.tf: Foundational resources including the Resource Group, Hub VNet, Spoke VNets, and VNet Peering connections.
-firewall.tf: The Azure Firewall instance, its mandatory dedicated subnet (AzureFirewallSubnet), and Public IP configuration.
-routing.tf: Route Tables and User Defined Routes (UDRs) that implement forced tunneling for the Spoke workloads.
-.gitignore: Ensures sensitive state files (.tfstate) and provider binaries are never committed to version control.
+---
 
-🚀 Deployment Instructions
-To deploy this architecture to your own Azure subscription, ensure you have the Azure CLI and Terraform installed.
+## 🏆 Certifications & Competencies
 
-Authenticate to Azure:
-az login
+I hold several advanced Microsoft certifications that validate my expertise in cloud architecture, network engineering, and cybersecurity:
 
-Initialize Terraform:
-terraform init
+*   **SC-100:** Microsoft Cybersecurity Architect Expert
+*   **AZ-305:** Azure Solutions Architect Expert
+*   **AZ-700:** Azure Network Engineer Associate
+*   **SC-200:** Microsoft Security Operations Analyst
 
-Review the Deployment Plan:
-terraform plan
+**Core Technical Competencies:**
+*   **Infrastructure as Code (IaC):** Terraform (HCL), Azure Bicep, ARM Templates, State Management, CI/CD Pipelines (GitHub Actions/Azure DevOps).
+*   **Cloud Architecture:** Hub & Spoke topologies, High Availability (HA), Disaster Recovery (DR), Well-Architected Framework.
+*   **Network Security:** Azure Firewall, Application Gateway (WAF), Network Security Groups (NSGs), Private Link/Endpoints, ExpressRoute.
+*   **Identity & Threat Protection:** Microsoft Entra ID (formerly Azure AD), RBAC, Microsoft Defender for Cloud, Microsoft Sentinel.
 
-Deploy the Infrastructure:
-terraform apply
+---
 
-Note: The deployment of the Azure Firewall resource typically takes 10-15 minutes.
+## 📂 Project Directory (Portfolio Demos)
 
-🧹 Clean Up
+Below is an index of the technical demonstrations available in this repository. Click on any project to view its specific `README.md`, architectural diagrams, and Terraform source code.
 
-To avoid ongoing charges (particularly for the Azure Firewall and Public IPs), destroy the resources when not in use:
-terraform destroy
+| Project Name | Description | Technologies Highlighted |
+| :--- | :--- | :--- |
+| [**1. Secure Hub & Spoke Architecture**](./01-secure-hub-spoke) | Deployment of a scalable Hub & Spoke network topology with centralized firewall routing and inspection. | `Terraform`, `Azure Firewall`, `VNet Peering`, `UDRs` |
+| [**2. Private AKS Cluster Deployment**](./02-private-aks) | *[Example]* Securing Azure Kubernetes Service with Private Endpoints and Entra ID RBAC integration. | `Terraform`, `AKS`, `Private Link`, `RBAC` |
+| [**3. Defender for Cloud & Sentinel Setup**](./03-defender-sentinel) | *[Example]* Automated deployment of Log Analytics Workspaces, Sentinel enablement, and Defender coverage. | `Terraform`, `Sentinel`, `Defender for Cloud` |
+| [**4. Secure Web App with WAF**](./04-secure-webapp) | *[Example]* Deploying an App Service behind an Application Gateway with Web Application Firewall enabled. | `Terraform`, `App Gateway`, `App Service` |
 
-👨‍‍💻 About the Author
-Matheus Luiz Saito Soares
-Azure Cloud & Security Architect
-Focused on building secure, scalable, and automated cloud infrastructure. Holding multiple expert-level Microsoft certifications including AZ-305 (Azure Solutions Architect Expert) and SC-100 (Cybersecurity Architect Expert).
+*(Note to Reviewer: Each subfolder contains instructions on how to initialize, plan, and apply the Terraform configurations, along with the required prerequisites).*
 
-Connect with me on LinkedIn: https://www.linkedin.com/in/matheus-luiz-saito-soares-b7ab80236
+---
+
+## 💡 Why This Approach?
+
+In real-world enterprise environments, security must be "shift-left" and embedded directly into the deployment pipelines. By utilizing Terraform, I ensure that every environment is:
+1.  **Immutable & Reproducible:** Eliminating configuration drift.
+2.  **Secure by Default:** Adhering to Zero Trust principles from the first line of code.
+3.  **Auditable:** All infrastructure changes are version-controlled and peer-reviewed.
+
+---
+
+## 📫 Let's Connect
+
+I am currently open to remote opportunities as a Cloud Security Engineer, DevSecOps Engineer, or Azure Architect. 
+
+*   **LinkedIn:** [Your LinkedIn Profile URL]
+*   **Email:** [Your Email Address]
+*   **Credly/Microsoft Learn:** [Link to your digital badges]
