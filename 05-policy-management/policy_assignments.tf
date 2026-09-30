@@ -16,7 +16,7 @@ resource "azurerm_management_group_policy_assignment" "audit_location_prod" {
 # 8. Assign the Baseline Governance Initiative to Production
 resource "azurerm_management_group_policy_assignment" "prod_baseline_governance" {
 	name			= "assign-baseline-prod"
-	management_group_id	= azurerm_management_group.org_prod_mg.id
+	management_group_id	= azurerm_management_group.prod_mg.id
 	policy_definition_id	= azurerm_policy_set_definition.baseline_governance.id
 	display_name		= "Enforce Baseline Governance in Production"
 	description		= "Ensures production resources adhere to location and taggin standards"

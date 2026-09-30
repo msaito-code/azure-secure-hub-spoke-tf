@@ -5,7 +5,7 @@ resource "azurerm_policy_definition" "require_tag" {
 	mode			= "Indexed"
 	display_name		= "Require Mandatory Tag"
 	description		= "Ensures that all indexed resources have the specified"
-	management_group_id	= azurerm_management_group_org_root.id
+	management_group_id	= azurerm_management_group.org_root.id
 
 	metadata = jsonencode ({
 		category = "Tags"

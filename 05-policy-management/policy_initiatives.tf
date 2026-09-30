@@ -1,12 +1,12 @@
 # 7. Policy Initiative: Baseline Governance
-resource "azurerm_policy_set_defition" "baseline_governance" {
+resource "azurerm_policy_set_definition" "baseline_governance" {
 	name			= "org-baseline=governance"
 	policy_type		= "Custom"
 	display_name		= "Orgamizational Baseline Governance"
 	description		= "Initiative containing fundamental governance policies for the organization"
 	management_group_id	= azurerm_management_group.org_root.id
 
-	parameters = jsoncode ({
+	parameters = jsonencode ({
 		allowedLocations = {
 			type 	 = "Array"
 			metadata = {
