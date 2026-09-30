@@ -36,9 +36,9 @@ Below is an index of the technical demonstrations available in this repository. 
 | Project Name | Description | Technologies Highlighted |
 | :--- | :--- | :--- |
 | [**1. Secure Hub & Spoke Architecture**](./01-secure-hub-spoke) | Deployment of a scalable Hub & Spoke network topology with centralized firewall routing and inspection. | `Terraform`, `Azure Firewall`, `VNet Peering`, `UDRs` |
-| [**2. Private AKS Cluster Deployment**](./02-private-aks) | *[Example]* Securing Azure Kubernetes Service with Private Endpoints and Entra ID RBAC integration. | `Terraform`, `AKS`, `Private Link`, `RBAC` |
-| [**3. Defender for Cloud & Sentinel Setup**](./03-defender-sentinel) | *[Example]* Automated deployment of Log Analytics Workspaces, Sentinel enablement, and Defender coverage. | `Terraform`, `Sentinel`, `Defender for Cloud` |
-| [**4. Secure Web App with WAF**](./04-secure-webapp) | *[Example]* Deploying an App Service behind an Application Gateway with Web Application Firewall enabled. | `Terraform`, `App Gateway`, `App Service` |
+| [**2. Private AKS Cluster Deployment**](./02-private-aks) | *Future Deployment* Securing Azure Kubernetes Service with Private Endpoints and Entra ID RBAC integration. | `Terraform`, `AKS`, `Private Link`, `RBAC` |
+| [**3. Defender for Cloud & Sentinel Setup**](./03-defender-sentinel) | *Future Deployment* Automated deployment of Log Analytics Workspaces, Sentinel enablement, and Defender coverage. | `Terraform`, `Sentinel`, `Defender for Cloud` |
+| [**4. Secure Web App with WAF**](./04-secure-webapp) | *Future Deployment* Deploying an App Service behind an Application Gateway with Web Application Firewall enabled. | `Terraform`, `App Gateway`, `App Service` |
 
 *(Note to Reviewer: Each subfolder contains instructions on how to initialize, plan, and apply the Terraform configurations, along with the required prerequisites).*
 
