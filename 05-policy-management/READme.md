@@ -53,7 +53,7 @@ Test Matrix
 | vnet-invalid-region | westus | "Production" | 400 Bad Request (Fail) | Blocked by Allowed Regions policy. |
 | vnet-missing-tag | eastus | None | 400 Bad Request (Fail) | Blocked by Required Tag policy.|
 
-*(Note to Reviewer: If you want to run these files using terraform, remember to create a subscription or move your main one to the Production Management Group created before. Since this can mess with existing policies, I thought that it would be better not to create or move one automatically).*
+*(Note to Reviewer: If you want to run these files using terraform, remember to create a subscription or move one that already exists to the Production Management Group created before. Since this can mess with existing policies, I thought that it would be better not to create or move a subscription automatically).*
 
 ## 🏃 Execution & API Response
 
