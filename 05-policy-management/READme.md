@@ -18,13 +18,13 @@ This module deploys the following structure:
 
 ```text
                                   [ Root Management Group ]
-                                              │ (Policies Defined Here)
+                                              │
                                    (Policy Initiative: Baseline)
                                               │
                       ┌───────────────────────┴───────────────────────┐
                       ▼                                               ▼
            [ Production Management Group ]                [ Development Management Group ]
-                      │
+                      │ (Policies Defined Here)
            (Initiative Assigned & Enforced)
 ```
 
