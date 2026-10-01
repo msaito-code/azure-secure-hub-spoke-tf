@@ -11,7 +11,7 @@ terraform {
 		resource_group_name	= "rg-terraform-state-sec-portfolio"
 		storage_account_name	= "tfstatesec61bb283b"
 		container_name		= "tfstate"
-		key			= "portfolio.terrafor.tfstate"
+		key			= "portfolio.terraform.tfstate"
 	}
 }
 
