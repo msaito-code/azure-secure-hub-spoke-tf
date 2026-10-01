@@ -17,7 +17,7 @@ This module demonstrates the implementation of enterprise-grade cloud governance
 This module deploys the following structure:
 
 ```text
-                                  [ Root Management Group ]
+                                  [ Portfolio Org Root Management Group ]
                                               │ (Policies Defined Here)
                                    (Policy Initiative: Baseline)
                                               │
@@ -36,6 +36,7 @@ This module deploys the following structure:
 
 | File | Description |
 | :--- | :--- |
+| management_groups.tf | Creates the management groups that will receive the policies. |
 | policy_definitions.tf | Contains the raw JSON logic for custom policies (location restrictions and tag enforcement). |
 | policy_initiatives.tf | Aggregates the custom policies into a single Organizational Baseline Governance initiative. |
 | policy_assignments.tf | Assigns the initiative to target management groups (e.g., Production) and passes specific parameters down to the rules. |
