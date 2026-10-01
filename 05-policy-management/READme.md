@@ -28,11 +28,11 @@ This module deploys the following structure:
            (Initiative Assigned & Enforced)
 ```
 
-Enforced Security Controls
+## Enforced Security Controls
   - Data Residency (Allowed Regions): A custom policy (allowed-azure-locations) that explicitly denies the creation of any resources outside of authorized regions (eastus, eastus2).
   - Cost & Resource Tracking (Mandatory Tags): A custom policy (require-mandatory-tag) requiring the Environment tag on all deployed resources to ensure accurate cost allocation and resource lifecycle management.
 
-📂 Module Files
+## 📂 Module Files
 
 | File | Description |
 | :--- | :--- | :--- |
@@ -41,7 +41,7 @@ Enforced Security Controls
 | policy_assignments.tf | Assigns the initiative to target management groups (e.g., Production) and passes specific parameters down to the rules. |
 
 
-🛑 Compliance Validation (deployment-test/)
+## 🛑 Compliance Validation (deployment-test/)
 
 To definitively prove that these governance guardrails work, this folder includes a deployment-test directory. It contains a Terraform script that simultaneously attempts to deploy three resources to test the Azure Policy API response.
 
@@ -52,7 +52,7 @@ Test Matrix
 | vnet-invalid-region | westus | "Production" | 400 Bad Request (Fail) | Blocked by Allowed Regions policy. |
 | vnet-missing-tag | eastus | None | 400 Bad Request (Fail) | Blocked by Mandatory Tag policy.|
 
-Execution & API Response
+## Execution & API Response
 
 When executing terraform apply in the test directory, Azure Resource Manager successfully provisions the compliant network, but intercepts and blocks the other two. Terraform records the compliant resource in the state file and outputs the following explicit API rejections for the non-compliant resources:
 
