@@ -50,7 +50,7 @@ Test Matrix
 | :--- | :--- | :--- | :--- | :--- |
 | vnet-compliant | eastus | "Production" | 201 Created (Success) |  Complies with all assigned policies.|
 | vnet-invalid-region | westus | "Production" | 400 Bad Request (Fail) | Blocked by Allowed Regions policy. |
-| vnet-missing-tag | eastus | None | 400 Bad Request (Fail) | Blocked by Mandatory Tag policy.|
+| vnet-missing-tag | eastus | None | 400 Bad Request (Fail) | Blocked by Required Tag policy.|
 
 ## 🏃 Execution & API Response
 
