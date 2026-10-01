@@ -35,7 +35,7 @@ This module deploys the following structure:
 ## 📂 Module Files
 
 | File | Description |
-| :--- | :--- | :--- |
+| :--- | :--- |
 | policy_definitions.tf | Contains the raw JSON logic for custom policies (location restrictions and tag enforcement). |
 | policy_initiatives.tf | Aggregates the custom policies into a single Organizational Baseline Governance initiative. |
 | policy_assignments.tf | Assigns the initiative to target management groups (e.g., Production) and passes specific parameters down to the rules. |
@@ -47,7 +47,7 @@ To definitively prove that these governance guardrails work, this folder include
 
 Test Matrix
 | Resource | Region | Tag (Environment) | Expected Outcome | Failure Reason |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- |
 | vnet-compliant | eastus | "Production" | 201 Created (Success) |  Complies with all assigned policies.|
 | vnet-invalid-region | westus | "Production" | 400 Bad Request (Fail) | Blocked by Allowed Regions policy. |
 | vnet-missing-tag | eastus | None | 400 Bad Request (Fail) | Blocked by Mandatory Tag policy.|
