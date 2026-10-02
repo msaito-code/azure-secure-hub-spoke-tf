@@ -1,7 +1,7 @@
 # 4. Creating AKS Resource Group
 resource "azurerm_resource_group" "aks_rg" {
 	name	 = "rg-aks-workload-portfolio"
-	location = azurerm_resource_group.network_vnet.location
+	location = azurerm_resource_group.network_rg.location
 }
 
 # 5. Create User Assigned Identity for AKS
@@ -19,7 +19,7 @@ resource "azurerm_role_assignment" "aks_dns_contributor" {
 }
 
 # 7. Grant Private DNS Zone Contributor role to the Managed Identity for DNS updates
-resource "azurerm_kuberetes_cluster" "private_aks" {
+resource "azurerm_kubernetes_cluster" "private_aks" {
 	name			= "aks-spoke1-eastus"
 	location		= azurerm_resource_group.aks_rg.location
 	resource_group_name	= azurerm_resource_group.aks_rg.name
@@ -38,7 +38,6 @@ resource "azurerm_kuberetes_cluster" "private_aks" {
 		node_count		= 2
 		vm_size			= "Standard_D2s_v7"
 		vnet_subnet_id		= azurerm_subnet.spoke1_subnet.id
-		enable_auto_scaling	= true
 		min_count		= 1
 		max_count		= 3
 		os_disk_type		= "Ephemeral"

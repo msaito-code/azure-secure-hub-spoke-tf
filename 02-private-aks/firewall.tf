@@ -1,7 +1,7 @@
 # The mandatory Firewall Subnet in the Hub
 resource "azurerm_subnet" "firewall_subnet" {
 	name			= "AzureFirewallSubnet"
-	resource_group_name	= azurerm_resource_group.portfolio_rg.name
+	resource_group_name	= azurerm_resource_group.network_rg.name
 	virtual_network_name	= azurerm_virtual_network.hub_vnet.name
 	address_prefixes	= ["10.0.1.0/26"]
 }
@@ -9,8 +9,8 @@ resource "azurerm_subnet" "firewall_subnet" {
 # Public IP for the Firewall
 resource "azurerm_public_ip" "firewall_pip" {
 	name			= "pip-hub-firewall"
-	location		= azurerm_resource_group.portfolio_rg.location
-	resource_group_name	= azurerm_resource_group.portfolio_rg.name
+	location		= azurerm_resource_group.network_rg.location
+	resource_group_name	= azurerm_resource_group.network_rg.name
 	allocation_method	= "Static"
 	sku			= "Standard"
 }
@@ -18,8 +18,8 @@ resource "azurerm_public_ip" "firewall_pip" {
 # The Azure Firewall instance
 resource "azurerm_firewall" "hub_firewall" {
 	name			= "afw-hub-eastus"
-	location		= azurerm_resource_group.portfolio_rg.location
-	resource_group_name 	= azurerm_resource_group.portfolio_rg.name
+	location		= azurerm_resource_group.network_rg.location
+	resource_group_name 	= azurerm_resource_group.network_rg.name
 	sku_name		= "AZFW_VNet"
 	sku_tier		= "Standard"
 

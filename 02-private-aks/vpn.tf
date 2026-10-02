@@ -1,7 +1,7 @@
 # 10. The mandatory Gateway Subnet in the Hub
 resource "azurerm_subnet" "gateway_subnet" {
 	name			= "GatewaySubnet" # This exact name is required by Azure
-	resrouce_group_name	= azurerm_resource_group.network_rg.name
+	resource_group_name	= azurerm_resource_group.network_rg.name
 	virtual_network_name	= azurerm_virtual_network.hub_vnet.name
 	address_prefixes	= ["10.0.2.0/27"]
 }

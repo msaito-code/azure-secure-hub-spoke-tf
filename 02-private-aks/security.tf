@@ -1,8 +1,8 @@
 # 11. Network Security Group for Spoke Workloads
 resource "azurerm_network_security_group" "spoke_nsg" {
 	name 			= "nsg-spoke-workloads"
-	location		= azurerm_resource_group.portfolio_rg.location
-	resource_group_name	= azurerm_resource_group.portfolio_rg.name
+	location		= azurerm_resource_group.network_rg.location
+	resource_group_name	= azurerm_resource_group.network_rg.name
 
 	# Security Rule: Explicitly Deny Direct RDP/SSH from the internet
 	security_rule {

@@ -1,8 +1,8 @@
 # Create a Route Table for the Spokes
 resource "azurerm_route_table" "spoke_rt" {
 	name				= "rt-spokes-to-firewall"
-	location			= azurerm_resource_group.portfolio_rg.location
-	resource_group_name		= azurerm_resource_group.portfolio_rg.name
+	location			= azurerm_resource_group.network_rg.location
+	resource_group_name		= azurerm_resource_group.network_rg.name
 	bgp_route_propagation_enabled 	= true
 
 	tags = {
@@ -14,7 +14,7 @@ resource "azurerm_route_table" "spoke_rt" {
 # Create the User Defined Route (UDR) pointing to the Firewall
 resource "azurerm_route" "default_to_firewall" {
 	name			= "udr-default-to-firewall"
-	resource_group_name	= azurerm_resource_group.portfolio_rg.name
+	resource_group_name	= azurerm_resource_group.network_rg.name
 	route_table_name	= azurerm_route_table.spoke_rt.name
 	address_prefix		= "0.0.0.0/0"
 	next_hop_type		= "VirtualAppliance"
