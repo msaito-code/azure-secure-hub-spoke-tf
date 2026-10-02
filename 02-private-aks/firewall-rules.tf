@@ -1,8 +1,8 @@
 # 8. Firewall Rules for egress traffic to the AKS Instance
 resource "azurerm_firewall_network_rule_collection" "aks_required_rules" {
 	name			= "aks-egress-rules"
-	azure_firewall_name 	= data.azurerm_firewall.hub_firewall.name
-	resource_group_name	= data.azurerm_resource_group.network_rg.name
+	azure_firewall_name 	= azurerm_firewall.hub_firewall.name
+	resource_group_name	= azurerm_resource_group.network_rg.name
 	priority		= 200
 	action			= "Allow"
 

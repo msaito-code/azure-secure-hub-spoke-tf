@@ -1,4 +1,4 @@
-# 14. The mandatory Firewall Subnet in the Hub
+# The mandatory Firewall Subnet in the Hub
 resource "azurerm_subnet" "firewall_subnet" {
 	name			= "AzureFirewallSubnet"
 	resource_group_name	= azurerm_resource_group.portfolio_rg.name
@@ -6,7 +6,7 @@ resource "azurerm_subnet" "firewall_subnet" {
 	address_prefixes	= ["10.0.1.0/26"]
 }
 
-# 15. Public IP for the Firewall
+# Public IP for the Firewall
 resource "azurerm_public_ip" "firewall_pip" {
 	name			= "pip-hub-firewall"
 	location		= azurerm_resource_group.portfolio_rg.location
@@ -15,7 +15,7 @@ resource "azurerm_public_ip" "firewall_pip" {
 	sku			= "Standard"
 }
 
-# 16. The Azure Firewall instance
+# The Azure Firewall instance
 resource "azurerm_firewall" "hub_firewall" {
 	name			= "afw-hub-eastus"
 	location		= azurerm_resource_group.portfolio_rg.location

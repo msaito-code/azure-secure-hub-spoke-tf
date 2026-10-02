@@ -1,7 +1,7 @@
 # 4. Creating AKS Resource Group
 resource "azurerm_resource_group" "aks_rg" {
 	name	 = "rg-aks-workload-portfolio"
-	location = data.azurerm_resource_group.network_vnet.location
+	location = azurerm_resource_group.network_vnet.location
 }
 
 # 5. Create User Assigned Identity for AKS
@@ -37,7 +37,7 @@ resource "azurerm_kuberetes_cluster" "private_aks" {
 		name			= "systempool"
 		node_count		= 2
 		vm_size			= "Standard_D2s_v7"
-		vnet_subnet_id		= data.azurerm_subnet.spoke1_subnet.id
+		vnet_subnet_id		= azurerm_subnet.spoke1_subnet.id
 		enable_auto_scaling	= true
 		min_count		= 1
 		max_count		= 3
