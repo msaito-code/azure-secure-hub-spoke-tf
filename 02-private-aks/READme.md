@@ -2,6 +2,8 @@
 
 This module demonstrates the implementation of a secure, enterprise-grade cloud architecture by deploying a private Azure Kubernetes Service (AKS) cluster within a Hub-and-Spoke network topology. The objective is to establish strict network isolation where the cluster control plane is kept private and all outbound workload traffic is centrally forced through an Azure Firewall for inspection.
 
+*(Note to recruiters: The files for the Hub, Spoke1 and Spoke2 Virtual Networks, Firewall, NSGs and UDRs are identical to the ones in **[01-secure-hub-spoke](../01-secure-hub-spoke)**. The reason for this, is because you can clone this repository and run **terraform plan** to check that it would deploy without any errors. This way, you won't need to first deploy the seucre hub and spoke infrastructure first, just to test this module.)*
+
 ---
 
 ## 🎯 Demonstrated Skills for Recruiters
