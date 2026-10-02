@@ -36,7 +36,7 @@ Below is an index of the technical demonstrations available in this repository. 
 | Project Name | Description | Technologies Highlighted |
 | :--- | :--- | :--- |
 | [**1. Secure Hub & Spoke Architecture**](./01-secure-hub-spoke) | Deployment of a scalable Hub & Spoke network topology with centralized firewall routing and inspection. | `Terraform`, `Azure Firewall`, `VNet Peering`, `UDRs` |
-| [**2. Private AKS Cluster Deployment**](./02-private-aks) | Securing Azure Kubernetes Service with Private Endpoints and Entra ID RBAC integration. | `Terraform`, `AKS`, `Private Link`, `RBAC` |
+| [**2. Private AKS Cluster Deployment**](./02-private-aks) | Securing Azure Kubernetes Service with a Hub-and-Spoke network topology, private cluster configuration, and centralized Azure Firewall egress inspection. | `Terraform`, `AKS`, `RBAC` |
 | [**3. Defender for Cloud & Sentinel Setup**](./03-defender-sentinel) | *[Future Deployment]* Automated deployment of Log Analytics Workspaces, Sentinel enablement, and Defender coverage. | `Terraform`, `Sentinel`, `Defender for Cloud` |
 | [**4. Secure Web App with WAF**](./04-secure-webapp) | *[Future Deployment]* Deploying an App Service behind an Application Gateway with Web Application Firewall enabled. | `Terraform`, `App Gateway`, `App Service` |
 | [**5. Policy Management with Policy Initiatives**](./05-policy-management) | Defining policies for audit and restrict purposes. | `Terraform`, `Azure Policy`, `Policy Initiatives` |
