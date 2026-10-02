@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aks-helloworld
+spec:
+  replica: 2
+  selector:
+    matchLabels:
+      app: aks-helloworld
+  template:
+    metadata:
+      labels:
+        app: aks-helloworld
+    spec:
+        containes:
+        - name: aks-helloworld
+          # Pulling a Microsoft-provided test app directly from MCR
+          image: mcr.microsoft.com/azuredocks/aks-helloworld:v1
+          ports:
+          - containerPorts: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aks-helloworld-internal
+  annotations:
+    # This annotation tells AKS to create a Private IP in your Spoke Vnet
+    service.beta.kubernetes.io/azure-load-balander-internal: "true"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: aks-helloworld
