@@ -38,6 +38,7 @@ resource "azurerm_kubernetes_cluster" "private_aks" {
 		node_count		= 2
 		vm_size			= "Standard_D2s_v7"
 		vnet_subnet_id		= azurerm_subnet.spoke1_subnet.id
+		auto_scaling_enabled	= true
 		min_count		= 1
 		max_count		= 3
 		os_disk_type		= "Ephemeral"
