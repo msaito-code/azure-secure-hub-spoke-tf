@@ -55,36 +55,16 @@ This module deploys the following structure:
 
 | File | Description |
 | --- | --- |
-| `aks.tf` | Provisions the private AKS cluster, standard VM node pools, and the User Assigned Identity for DNS updates.
-
- |
-| `dns.tf` | Creates the Azure Private DNS Zone and configures links to the Hub and Spoke Virtual Networks.
-
- |
-| `firewall.tf` | Deploys the Standard SKU Azure Firewall instance and its required public IP into the Hub VNet.
-
- |
-| `firewall-apps.tf` | Configures Firewall Application Rules to allow outbound HTTPS/HTTP traffic for required AKS services.
-
- |
-| `firewall-rules.tf` | Configures Firewall Network Rules to allow outbound UDP traffic for AKS core connectivity and NTP time sync.
-
- |
-| `network.tf` | Builds the core network foundation: Hub VNet, two Spoke VNets, underlying subnets, and all peering relationships.
-
- |
-| `providers.tf` | Defines required Terraform providers (AzureRM, TLS) and configures the remote Azure Storage backend for state management.
-
- |
-| `routing.tf` | Creates the Route Table and default User Defined Route (0.0.0.0/0) pointing to the Azure Firewall, linking it to the Spoke subnets.
-
- |
-| `security.tf` | Establishes the Network Security Group to block direct internet administrative access and associates it with the Spokes.
-
- |
-| `test-app.yml` | Kubernetes manifest used to validate cluster functionality and internal networking.
-
- |
+| `aks.tf` | Provisions the private AKS cluster, standard VM node pools, and the User Assigned Identity for DNS updates. |
+| `dns.tf` | Creates the Azure Private DNS Zone and configures links to the Hub and Spoke Virtual Networks. |
+| `firewall.tf` | Deploys the Standard SKU Azure Firewall instance and its required public IP into the Hub VNet. |
+| `firewall-apps.tf` | Configures Firewall Application Rules to allow outbound HTTPS/HTTP traffic for required AKS services. |
+| `firewall-rules.tf` | Configures Firewall Network Rules to allow outbound UDP traffic for AKS core connectivity and NTP time sync. |
+| `network.tf` | Builds the core network foundation: Hub VNet, two Spoke VNets, underlying subnets, and all peering relationships. |
+| `providers.tf` | Defines required Terraform providers (AzureRM, TLS) and configures the remote Azure Storage backend for state management. |
+| `routing.tf` | Creates the Route Table and default User Defined Route (0.0.0.0/0) pointing to the Azure Firewall, linking it to the Spoke subnets. |
+| `security.tf` | Establishes the Network Security Group to block direct internet administrative access and associates it with the Spokes. |
+| `test-app.yml` | Kubernetes manifest used to validate cluster functionality and internal networking. |
 
 ## 🛑 Workload Validation (`test-app.yml`)
 
